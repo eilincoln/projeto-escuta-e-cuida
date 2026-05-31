@@ -186,7 +186,7 @@ nav {
   font-weight: 300;
   text-align: center;
   color: var(--text);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .section-title em {
@@ -464,6 +464,115 @@ nav {
 
 .psi-wa-btn:hover {
   background: var(--wa-dark);
+}
+
+/* envolvidos no projeto */
+
+.project-team {
+  padding: 4.5rem 2.5rem;
+  background: var(--white);
+}
+
+.team-description {
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  color: var(--text-mid);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.team-grid {
+  max-width: 900px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.team-card {
+  background: var(--cream);
+  border: 1px solid #ececec;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical */
+  align-items: center; /* horizontal */
+
+  min-height: 140px;
+}
+
+.team-card h3 {
+  font-size: 1rem;
+  color: var(--green-dark);
+  margin-bottom: 0.5rem;
+}
+
+.team-card span {
+  font-size: 0.85rem;
+  color: var(--text-mid);
+}
+
+.developer {
+  padding: 4.5rem 2.5rem;
+  background: var(--green-light);
+}
+
+.developer-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid #e8e8e8;
+}
+
+.developer-info h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  color: var(--green-dark);
+  margin-bottom: 0.5rem;
+}
+
+.developer-role {
+  color: var(--green);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+}
+
+.developer-info p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: var(--text-mid);
+  line-height: 1.8;
+}
+
+.developer-links {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.developer-links a {
+  text-decoration: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.7rem;
+  background: var(--green-dark);
+  color: white;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.developer-links a:hover {
+  transform: translateY(-2px);
 }
 
 .notice {
