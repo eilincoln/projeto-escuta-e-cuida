@@ -289,6 +289,13 @@ nav {
   border: 3px solid white;
 }
 
+.psi-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .psi-name {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.2rem;
@@ -307,6 +314,27 @@ nav {
 
 .psi-card-body {
   padding: 1.2rem 1.5rem 1.5rem;
+}
+
+.psi-tag {
+  display: inline-block;
+  background: var(--green-light);
+  color: var(--green-dark);
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.psi-description {
+  font-size: 0.85rem;
+  color: var(--text-mid);
+  line-height: 1.8;
+}
+
+.psi-description span {
+  font-weight: bold;
 }
 
 .psi-info-row {
