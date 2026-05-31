@@ -237,6 +237,55 @@ nav {
   line-height: 1.7;
 }
 
+/* abordagens terapêuticas */
+
+.approaches {
+  padding: 4.5rem 2.5rem;
+  background: var(--green-light);
+}
+
+.approaches-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.approach-card {
+  background: var(--white);
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid #ececec;
+}
+
+.approach-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  color: var(--green-dark);
+  margin-bottom: 1rem;
+}
+
+.approach-card p {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.approach-card p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .approaches-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* psicologos */
+
 #psicologos {
   padding: 4.5rem 2.5rem;
   background: var(--cream);
