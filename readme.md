@@ -98,4 +98,9 @@ Desenvolvedor Web • Estudante de Engenharia de Software
 
 ## 📄 Licença
 
-Este projeto foi desenvolvido para fins acadêmicos e sociais, sem fins lucrativos.
+Este projeto está licenciado sob a **Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0)**.
+
+Você pode visualizar, estudar e compartilhar o código com os devidos créditos,
+mas **não é permitido o uso para fins comerciais ou lucrativos**.
+
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
