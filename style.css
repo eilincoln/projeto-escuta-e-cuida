@@ -31,6 +31,8 @@ body {
   line-height: 1.7;
 }
 
+/* ─── NAVBAR ─── */
+
 nav {
   background: var(--white);
   padding: 1rem 2.5rem;
@@ -65,6 +67,21 @@ nav {
   font-weight: 500;
 }
 
+/* ─── HERO ─── */
+
+.hero-psi {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 12rem;
+  color: rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+}
+
 .hero {
   background: var(--green-dark);
   color: white;
@@ -86,6 +103,35 @@ nav {
   pointer-events: none;
 }
 
+/* Animação de entrada do hero */
+.hero-badge,
+.hero h1,
+.hero p,
+.hero-info-strip {
+  animation: heroFadeUp 0.7s ease both;
+}
+
+.hero h1 {
+  animation-delay: 0.1s;
+}
+.hero p {
+  animation-delay: 0.2s;
+}
+.hero-info-strip {
+  animation-delay: 0.3s;
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -101,6 +147,7 @@ nav {
   color: rgba(255, 255, 255, 0.85);
 }
 
+/* Ponto verde pulsante */
 .hero-badge::before {
   content: "";
   width: 7px;
@@ -108,6 +155,19 @@ nav {
   border-radius: 50%;
   background: var(--wa);
   display: inline-block;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.5);
+  }
 }
 
 .hero h1 {
@@ -165,6 +225,8 @@ nav {
   color: rgba(255, 255, 255, 0.5);
 }
 
+/* ─── COMO FUNCIONA ─── */
+
 .how {
   padding: 4.5rem 2.5rem;
   background: var(--white);
@@ -207,6 +269,14 @@ nav {
   padding: 2rem 1.5rem;
   border-radius: 1rem;
   background: var(--cream);
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+
+.step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(26, 92, 58, 0.08);
 }
 
 .step-num {
@@ -221,6 +291,11 @@ nav {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.3rem;
   margin: 0 auto 1rem;
+  transition: transform 0.25s;
+}
+
+.step:hover .step-num {
+  transform: scale(1.1);
 }
 
 .step h4 {
@@ -237,7 +312,7 @@ nav {
   line-height: 1.7;
 }
 
-/* abordagens terapêuticas */
+/* ─── ABORDAGENS TERAPÊUTICAS ─── */
 
 .approaches {
   padding: 4.5rem 2.5rem;
@@ -247,7 +322,6 @@ nav {
 .approaches-grid {
   max-width: 1100px;
   margin: 0 auto;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
@@ -258,6 +332,14 @@ nav {
   border-radius: 1rem;
   padding: 2rem;
   border: 1px solid #ececec;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+
+.approach-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(26, 92, 58, 0.1);
 }
 
 .approach-card h3 {
@@ -284,7 +366,7 @@ nav {
   }
 }
 
-/* psicologos */
+/* ─── PSICÓLOGOS ─── */
 
 #psicologos {
   padding: 4.5rem 2.5rem;
@@ -303,9 +385,6 @@ nav {
 .psi-card {
   width: 300px;
   align-self: start;
-}
-
-.psi-card {
   background: var(--white);
   border-radius: 1.2rem;
   overflow: hidden;
@@ -313,7 +392,6 @@ nav {
   transition:
     transform 0.25s,
     box-shadow 0.25s;
-
   display: flex;
   flex-direction: column;
 }
@@ -339,6 +417,11 @@ nav {
   border-radius: 50%;
   overflow: hidden;
   border: 4px solid white;
+  transition: transform 0.3s;
+}
+
+.psi-card:hover .psi-avatar {
+  transform: scale(1.05);
 }
 
 .psi-avatar img {
@@ -385,13 +468,10 @@ nav {
   font-size: 0.85rem;
   line-height: 1.6;
   color: var(--text-mid);
-
   display: -webkit-box;
   -webkit-box-orient: vertical;
-
   line-clamp: 5;
   -webkit-line-clamp: 5;
-
   overflow: hidden;
 }
 
@@ -406,11 +486,9 @@ nav {
   border: none;
   padding: 0;
   margin-top: 10px;
-
   color: var(--green);
   font-size: 0.85rem;
   font-weight: 500;
-
   cursor: pointer;
   align-self: flex-start;
 }
@@ -458,15 +536,18 @@ nav {
   font-size: 0.88rem;
   font-weight: 500;
   letter-spacing: 0.02em;
-  transition: background 0.2s;
+  transition:
+    background 0.2s,
+    transform 0.2s;
   margin-top: auto;
 }
 
 .psi-wa-btn:hover {
   background: var(--wa-dark);
+  transform: translateY(-2px);
 }
 
-/* envolvidos no projeto */
+/* ─── EQUIPE DO PROJETO ─── */
 
 .project-team {
   padding: 4.5rem 2.5rem;
@@ -485,7 +566,6 @@ nav {
 .team-grid {
   max-width: 900px;
   margin: 0 auto;
-
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
@@ -497,13 +577,19 @@ nav {
   border-radius: 1rem;
   padding: 1.5rem;
   text-align: center;
-
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertical */
-  align-items: center; /* horizontal */
-
+  justify-content: center;
+  align-items: center;
   min-height: 140px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.team-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(26, 92, 58, 0.08);
 }
 
 .team-card h3 {
@@ -516,6 +602,8 @@ nav {
   font-size: 0.85rem;
   color: var(--text-mid);
 }
+
+/* ─── DESENVOLVEDOR ─── */
 
 .developer {
   padding: 4.5rem 2.5rem;
@@ -530,6 +618,14 @@ nav {
   padding: 2rem;
   text-align: center;
   border: 1px solid #e8e8e8;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+
+.developer-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(26, 92, 58, 0.1);
 }
 
 .developer-info h3 {
@@ -543,7 +639,7 @@ nav {
   color: var(--green);
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
-  font-weight: 900;
+  font-weight: 500;
 }
 
 .developer-info p {
@@ -568,12 +664,17 @@ nav {
   background: var(--green-dark);
   color: white;
   font-weight: 500;
-  transition: 0.2s;
+  transition:
+    transform 0.2s,
+    background 0.2s;
 }
 
 .developer-links a:hover {
   transform: translateY(-2px);
+  background: var(--green);
 }
+
+/* ─── NOTICE ─── */
 
 .notice {
   background: var(--green-dark);
@@ -598,6 +699,8 @@ nav {
   display: block;
   margin-bottom: 0.3rem;
 }
+
+/* ─── FOOTER ─── */
 
 footer {
   background: #111;
@@ -624,6 +727,90 @@ footer .footer-right {
   font-size: 0.72rem;
   letter-spacing: 0.08em;
 }
+
+/* ─── ANIMAÇÃO SCROLL (fade-in ao entrar na viewport) ─── */
+
+.psi-card,
+.step,
+.approach-card,
+.team-card,
+.developer-card {
+  animation: fadeUp 0.5s ease both;
+}
+
+.psi-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.psi-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.psi-card:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.psi-card:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.psi-card:nth-child(5) {
+  animation-delay: 0.25s;
+}
+.psi-card:nth-child(6) {
+  animation-delay: 0.3s;
+}
+.psi-card:nth-child(7) {
+  animation-delay: 0.35s;
+}
+
+.step:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.step:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.step:nth-child(3) {
+  animation-delay: 0.25s;
+}
+
+.approach-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.approach-card:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.approach-card:nth-child(3) {
+  animation-delay: 0.25s;
+}
+
+.team-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.team-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.team-card:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.team-card:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.team-card:nth-child(5) {
+  animation-delay: 0.25s;
+}
+.team-card:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── RESPONSIVO ─── */
 
 @media (max-width: 700px) {
   nav {
