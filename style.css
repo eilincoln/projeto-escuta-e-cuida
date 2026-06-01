@@ -706,10 +706,9 @@ footer {
   background: #111;
   color: rgba(255, 255, 255, 0.45);
   padding: 1.8rem 2.5rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -723,9 +722,25 @@ footer .footer-left strong {
   font-weight: 500;
 }
 
+footer .footer-center {
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+footer .footer-center a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer .footer-center a:hover {
+  color: var(--green-mid);
+}
+
 footer .footer-right {
   font-size: 0.72rem;
   letter-spacing: 0.08em;
+  text-align: right;
 }
 
 /* ─── ANIMAÇÃO SCROLL (fade-in ao entrar na viewport) ─── */
